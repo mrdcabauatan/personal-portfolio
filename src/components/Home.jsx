@@ -138,19 +138,13 @@ const Home = ({ darkMode }) => {
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
-
-              <img
-                src={hi}
-                alt="Hi icon"
-                className="absolute -top-20 sm:top-20 left-6 sm:left-20 w-14 h-14 sm:w-20 sm:h-20 object-contain animate-bounce opacity-90 z-10"
-              />
             </div>
           </div>
         </div>
 
         {/* Stats */}
-        <div className="absolute bottom-30 left-1/2 -translate-x-1/2 w-full px-4">
-          <div className="flex justify-center gap-8 sm:gap-12 lg:gap-16">
+        <div className="w-full px-4 pb-8 mt-6 lg:mt-10">
+  <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 sm:gap-x-14">
             {/* Experience */}
             <div className="text-center" data-aos="zoom-in" data-aos-delay="600">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400">
