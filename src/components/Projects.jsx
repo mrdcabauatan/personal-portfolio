@@ -5,8 +5,8 @@ const Projects = ({ darkMode }) => {
   const projects = [
     {
       id: 1,
-      title: "Digital invitation",
-      desc: "A responsive and elegantly designed digital invitation website that presents event details, schedule, venue information, and RSVP functionality in a clean and user-friendly format.",
+      title: "Digital Invitation",
+      desc: "A responsive digital invitation website that presents event details, schedule, venue information, and RSVP functionality in a clean and user-friendly format.",
       tags: ["ReactJS", "TypeScript", "Tailwind CSS"],
       status: "In progress",
       codeUrl: "https://github.com/mrdcabauatan/carla-will-wedding-invitation",
@@ -139,7 +139,12 @@ const Projects = ({ darkMode }) => {
                         href={project.codeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-5 py-2 text-sm rounded-md border border-white/20 text-white hover:bg-white/10 transition"
+                        className={`px-5 py-2 text-sm rounded-md border transition
+                          ${
+                            darkMode
+                              ? "border-white/20 text-gray-300 hover:text-white hover:bg-white/10"
+                              : "border-gray-600 text-gray-700 hover:text-gray-100 hover:bg-gray-600"
+                          }`}
                       >
                         Code
                       </a>
@@ -148,7 +153,12 @@ const Projects = ({ darkMode }) => {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-5 py-2 text-sm rounded-md border border-white/20 text-white hover:bg-white/10 transition"
+                        className={`px-5 py-2 text-sm rounded-md border transition
+                          ${
+                            darkMode
+                              ? "border-white/20 text-gray-300 hover:text-white hover:bg-white/10"
+                              : "border-gray-600 text-gray-700 hover:text-gray-100 hover:bg-gray-600"
+                          }`}
                       >
                         Live Demo
                       </a>
