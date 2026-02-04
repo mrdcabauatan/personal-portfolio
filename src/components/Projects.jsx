@@ -1,30 +1,32 @@
-import { FiSettings } from 'react-icons/fi'
-import wip from '../assets/wip.png'
+import { FiSettings } from "react-icons/fi";
+import wip from "../assets/wip.png";
 
 const Projects = ({ darkMode }) => {
   const projects = [
     {
       id: 1,
-      title: 'Marketing Website',
-      desc: 'A responsive website designed to showcase brand identity and drive user engagement',
-      tags: ['ReactJS', 'TypeScript', 'Tailwind CSS'],
-      status: 'In progress',
+      title: "Digital invitation",
+      desc: "A responsive and elegantly designed digital invitation website that presents event details, schedule, venue information, and RSVP functionality in a clean and user-friendly format.",
+      tags: ["ReactJS", "TypeScript", "Tailwind CSS"],
+      status: "In progress",
+      codeUrl: "https://github.com/mrdcabauatan/carla-will-wedding-invitation",
+      demoUrl: "https://carlawillwedding.netlify.app/",
     },
     {
       id: 2,
-      title: 'Finance Tracker',
-      desc: 'A lightweight mobile app for tracking expenses and visualizing personal financial insights in real time.',
-      tags: ['Flutter', 'Dart'],
-      status: 'Not started',
+      title: "Finance Tracker",
+      desc: "A lightweight mobile app for tracking expenses and visualizing personal financial insights in real time.",
+      tags: ["Flutter", "Dart"],
+      status: "Not started",
     },
     {
-      id: 5,
-      title: 'Task Management',
-      desc: 'A productivity-focused platform for organizing tasks, tracking progress, and improving team workflow.',
-      tags: ['VueJS', 'TypeScript', 'NodeJS'],
-      status: 'Not started',
-    },  
-  ]
+      id: 3,
+      title: "Task Management",
+      desc: "A productivity-focused platform for organizing tasks, tracking progress, and improving team workflow.",
+      tags: ["VueJS", "TypeScript", "NodeJS"],
+      status: "Not started",
+    },
+  ];
 
   return (
     <section
@@ -36,10 +38,10 @@ const Projects = ({ darkMode }) => {
           <h2
             className="text-3xl sm:text-4xl font-bold mb-3"
             style={{
-              background: 'linear-gradient(to right, #f97316, #f59e0b)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              color: 'transparent',
+              background: "linear-gradient(to right, #f97316, #f59e0b)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
             }}
           >
             Projects
@@ -47,7 +49,7 @@ const Projects = ({ darkMode }) => {
 
           <p
             className="max-w-xl mx-auto"
-            style={{ color: darkMode ? '#d1d5db' : '#6b7280' }}
+            style={{ color: darkMode ? "#d1d5db" : "#6b7280" }}
           >
             Here are some projects I'm currently working on
           </p>
@@ -60,23 +62,23 @@ const Projects = ({ darkMode }) => {
               key={project.id}
               style={{
                 background: darkMode
-                    ? 'linear-gradient(to bottom right, #1f2937, #111827)'
-                    : 'linear-gradient(to bottom right, #ffffff, #f3f4f6)',
-                borderColor: darkMode ? '#374151' : '#e5e7eb',
+                  ? "linear-gradient(to bottom right, #1f2937, #111827)"
+                  : "linear-gradient(to bottom right, #ffffff, #f3f4f6)",
+                borderColor: darkMode ? "#374151" : "#e5e7eb",
               }}
               className="h-full p-6 rounded-2xl border hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-2 group hover:shadow-[0_0_30px_rgb(255,165,0,0.15)]"
             >
               <div className="p-4">
                 <h3
                   className="text-lg font-bold mb-2"
-                  style={{ color: darkMode ? 'white' : '#1f2937' }}
+                  style={{ color: darkMode ? "white" : "#1f2937" }}
                 >
                   {project.title}
                 </h3>
 
                 <p
                   className="text-sm mb-3"
-                  style={{ color: darkMode ? '#d1d5db' : '#6b7280' }}
+                  style={{ color: darkMode ? "#d1d5db" : "#6b7280" }}
                 >
                   {project.desc}
                 </p>
@@ -86,20 +88,22 @@ const Projects = ({ darkMode }) => {
                     <span
                       key={idx}
                       style={{
-                        backgroundColor: darkMode ? '#374151' : '#f3f4f6',
-                        color: darkMode ? '#d1d5db' : '#4b5563',
+                        backgroundColor: darkMode ? "#374151" : "#f3f4f6",
+                        color: darkMode ? "#d1d5db" : "#4b5563",
                       }}
-                      className="px-2 py-1 text-xs rounded-full"
+                      className="px-2 py-1 text-[10px] rounded-full"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                 <div
+                <div
                   className="mt-5 mb-4 h-[4px] rounded-full"
                   style={{
-                    backgroundColor: darkMode ? 'rgba(255,255,255,0.25)' : 'rgba(17,24,39,0.18)',
+                    backgroundColor: darkMode
+                      ? "rgba(255,255,255,0.25)"
+                      : "rgba(17,24,39,0.18)",
                   }}
                 />
 
@@ -108,25 +112,48 @@ const Projects = ({ darkMode }) => {
                     className="w-9 h-9 rounded-full flex items-center justify-center"
                     style={{
                       background:
-                        project.status === 'Not started'
-                          ? '#374151'
-                          : 'linear-gradient(to right, #f97316, #f59e0b)',
+                        project.status === "Not started"
+                          ? "#374151"
+                          : "linear-gradient(to right, #f97316, #f59e0b)",
 
                       boxShadow:
-                        project.status === 'Not started'
-                          ? '0 0 0 3px rgba(107,114,128,0.15)'
-                          : '0 0 0 3px rgba(249,115,22,0.15)',
+                        project.status === "Not started"
+                          ? "0 0 0 3px rgba(107,114,128,0.15)"
+                          : "0 0 0 3px rgba(249,115,22,0.15)",
                     }}
                   >
                     <FiSettings className="text-white text-lg" />
                   </div>
 
                   <span
-                    className="text-sm"
-                    style={{ color: darkMode ? '#e5e7eb' : '#374151' }}
+                    className="text-sm whitespace-nowrap"
+                    style={{ color: darkMode ? "#e5e7eb" : "#374151" }}
                   >
                     {project.status}
                   </span>
+
+                  {/* Action Buttons */}
+                  {project.status !== "Not started" && (
+                    <div className="flex items-center gap-3 ml-auto">
+                      <a
+                        href={project.codeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 py-2 text-sm rounded-md border border-white/20 text-white hover:bg-white/10 transition"
+                      >
+                        Code
+                      </a>
+
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 py-2 text-sm rounded-md border border-white/20 text-white hover:bg-white/10 transition"
+                      >
+                        Live Demo
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -139,29 +166,30 @@ const Projects = ({ darkMode }) => {
             className="w-full max-w-5xl h-px"
             style={{
               backgroundColor: darkMode
-                ? 'rgba(255,255,255,0.25)'
-                : 'rgba(17,24,39,0.2)',
+                ? "rgba(255,255,255,0.25)"
+                : "rgba(17,24,39,0.2)",
             }}
           />
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-            <div
-              className="w-25 h-25 rounded-full flex items-center justify-center"
-            >
-              <img src={wip} alt="In progress" className="object-contain animate-rotate-slow"/>
+            <div className="w-25 h-25 rounded-full flex items-center justify-center">
+              <img
+                src={wip}
+                alt="In progress"
+                className="object-contain animate-rotate-slow"
+              />
             </div>
             <p
               className="text-sm sm:text-base max-w-xl"
-              style={{ color: darkMode ? '#d1d5db' : '#4b5563' }}
+              style={{ color: darkMode ? "#d1d5db" : "#4b5563" }}
             >
-              <span>More projects coming soon.</span>{' '}
-              I’m currently building and refining new features. Updates will be added
-              here as they ship.
+              <span>More projects coming soon.</span> I’m currently building and
+              refining new features. Updates will be added here as they ship.
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
