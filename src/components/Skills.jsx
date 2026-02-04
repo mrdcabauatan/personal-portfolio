@@ -2,6 +2,7 @@ import { useState } from 'react'
 import flutter from '../assets/skills/front-end/flutter.png'
 import dart from '../assets/skills/front-end/dart.png'
 import react from '../assets/skills/front-end/react.png'
+import angular from '../assets/skills/front-end/angular.png'
 import vue from '../assets/skills/front-end/vue.png'
 import javaScript from '../assets/skills/front-end/javascript.png'
 import typeScript from '../assets/skills/front-end/typescript.png'
@@ -9,10 +10,12 @@ import html from '../assets/skills/front-end/html.png'
 import css from '../assets/skills/front-end/css.png'
 import bootstrap from '../assets/skills/front-end/bootstrap.png'
 import tailwind from '../assets/skills/front-end/tailwind.png'
-import node from '../assets/skills/back-end-api/node.png'
-import cSharp from '../assets/skills/back-end-api/c-sharp.png'
-import cPlus from '../assets/skills/back-end-api/c-plus.png'
+import java from '../assets/skills/back-end-api/java.png'
+import springboot from '../assets/skills/back-end-api/springboot.png'
 import api from '../assets/skills/back-end-api/api.png'
+import cSharp from '../assets/skills/other/c-sharp.png'
+import c from '../assets/skills/other/c.png'
+import cPlus from '../assets/skills/other/c-plus.png'
 import git from '../assets/skills/version-control/git.png'
 import github from '../assets/skills/version-control/github.png'
 import gitlab from '../assets/skills/version-control/gitlab.png'
@@ -22,6 +25,7 @@ const Skills = ({ darkMode }) => {
   const techSkills =[
     'Frontend Development Technologies',
     'Backend & API Technologies',
+    'Other Programming Languages',
     'Version Control Systems',
   ]
 
@@ -44,6 +48,13 @@ const Skills = ({ darkMode }) => {
       name: 'ReactJS',
       icon: react,
       level: 85,
+      color: 'from-fuchsia-500 to-purple-600',
+      category: 'Frontend Development Technologies',
+    },
+     {
+      name: 'AngularJS',
+      icon: angular,
+      level: 50,
       color: 'from-fuchsia-500 to-purple-600',
       category: 'Frontend Development Technologies',
     },
@@ -96,10 +107,24 @@ const Skills = ({ darkMode }) => {
       color: 'from-fuchsia-500 to-purple-600',
       category: 'Frontend Development Technologies',
     },
-     {
-      name: 'NodeJS',
-      icon: node,
-      level: 30,
+    {
+      name: 'Java',
+      icon: java,
+      level: 40,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Backend & API Technologies',
+    },
+    {
+      name: 'Spring Boot',
+      icon: springboot,
+      level: 55,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Backend & API Technologies',
+    },
+    {
+      name: 'RestAPI Integration',
+      icon: api,
+      level: 70,
       color: 'from-green-500 to-emerald-500',
       category: 'Backend & API Technologies',
     },
@@ -107,22 +132,22 @@ const Skills = ({ darkMode }) => {
       name: 'C#',
       icon: cSharp,
       level: 70,
-      color: 'from-green-500 to-emerald-500',
-      category: 'Backend & API Technologies',
+      color: 'from-pink-500 to-rose-500',
+      category: 'Other Programming Languages',
+    },
+    {
+      name: 'C',
+      icon: c,
+      level: 60,
+      color: 'from-pink-500 to-rose-500',
+      category: 'Other Programming Languages',
     },
     {
       name: 'C++',
       icon: cPlus,
       level: 60,
-      color: 'from-green-500 to-emerald-500',
-      category: 'Backend & API Technologies',
-    },
-    {
-      name: 'RestAPI',
-      icon: api,
-      level: 55,
-      color: 'from-green-500 to-emerald-500',
-      category: 'Backend & API Technologies',
+      color: 'from-pink-500 to-rose-500',
+      category: 'Other Programming Languages',
     },
     {
       name: 'Git',
