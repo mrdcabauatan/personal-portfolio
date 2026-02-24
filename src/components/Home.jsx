@@ -1,44 +1,56 @@
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 import { useMemo } from "react";
-import { DownloadIcon } from 'lucide-react'
-import linkedin from '../assets/home/social_icons/linkedin.png'
-import github from '../assets/home/social_icons/github.png'
-import facebook from '../assets/home/social_icons/facebook.png'
-import instagram from '../assets/home/social_icons/instagram.png'
-import homePic from '../assets/home/image/image.png'
-import hi from '../assets/home/image/hi.png'
-import CV from '../assets/home/cv/CV_MRDCabauatan.pdf'
+import { DownloadIcon } from "lucide-react";
+import linkedin from "../assets/home/social_icons/linkedin.png";
+import github from "../assets/home/social_icons/github.png";
+import facebook from "../assets/home/social_icons/facebook.png";
+import instagram from "../assets/home/social_icons/instagram.png";
+import homePic from "../assets/home/image/image.png";
+import resume from "../assets/home/resume/Resume_MRDCabauatan.pdf";
 
 const Home = ({ darkMode }) => {
   const socialIcons = [
-    { icon: linkedin, alt: 'LinkedIn', link: 'https://www.linkedin.com/in/mrdcabauatan/'},
-    { icon: github, alt: 'Github', link: 'https://github.com/mrdcabauatan' },
-    { icon: facebook, alt: 'Facebook', link: 'https://www.facebook.com/mic.cabauatan/' },
-    { icon: instagram, alt: 'Instagram', link: 'https://www.instagram.com/mrdcabauatan/' },
-  ]
+    {
+      icon: linkedin,
+      alt: "LinkedIn",
+      link: "https://www.linkedin.com/in/mrdcabauatan/",
+    },
+    { icon: github, alt: "Github", link: "https://github.com/mrdcabauatan" },
+    {
+      icon: facebook,
+      alt: "Facebook",
+      link: "https://www.facebook.com/mic.cabauatan/",
+    },
+    {
+      icon: instagram,
+      alt: "Instagram",
+      link: "https://www.instagram.com/mrdcabauatan/",
+    },
+  ];
 
   const darkTheme = {
-    textPrimary: 'text-white',
-    textSecondary: 'text-gray-300',
+    textPrimary: "text-white",
+    textSecondary: "text-gray-300",
     buttonSecondary: `text-white border-2 border-orange-500 hover:bg-orange-600`,
-    decorativeCircle: 'bg-orange-500 opacity-10',
-  }
+    decorativeCircle: "bg-orange-500 opacity-10",
+  };
 
   const lightTheme = {
-    textPrimary: 'text-gray-900',
-    textSecondary: 'text-gray-700',
+    textPrimary: "text-gray-900",
+    textSecondary: "text-gray-700",
     buttonSecondary: `text-gray-800 border-2 border-orange-500 hover:bg-orange-500 hover:text-white`,
-    decorativeCircle: 'bg-orange-400 opacity-20',
-  }
+    decorativeCircle: "bg-orange-400 opacity-20",
+  };
 
-  const theme = darkMode ? darkTheme : lightTheme
+  const theme = darkMode ? darkTheme : lightTheme;
 
   const experienceYears = useMemo(() => {
     const start = new Date("2022-05-16");
     const now = new Date();
     let years = now.getFullYear() - start.getFullYear();
 
-    const hasNotReachedAnniversary = now < new Date(now.getFullYear(), start.getMonth(), start.getDate());
+    const hasNotReachedAnniversary =
+      now < new Date(now.getFullYear(), start.getMonth(), start.getDate());
 
     if (hasNotReachedAnniversary) years--;
 
@@ -65,14 +77,14 @@ const Home = ({ darkMode }) => {
                   data-aos-delay={`${400 + index * 100}`}
                   className="transform hover:scale-110 transition-transform duration-300"
                   onClick={() => {
-                    window.open(social.link)
+                    window.open(social.link);
                   }}
                 >
                   <img
                     src={social.icon}
                     alt={social.alt}
                     className={`w-8 h-8 sm:w-10 sm:h-10 object-contain ${
-                      darkMode ? '' : 'filter brightness-75'
+                      darkMode ? "" : "filter brightness-75"
                     }`}
                   />
                 </a>
@@ -101,9 +113,10 @@ const Home = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-dela="600"
             >
-              Transforming ideas into functional solutions. 
-              Valued for versatility, taking on roles beyond development such as testing and documentation, and for producing high-quality, 
-              maintainable code.
+              Transforming ideas into functional solutions. Valued for
+              versatility, taking on roles beyond development such as testing
+              and documentation, and for producing high-quality, maintainable
+              code.
             </p>
 
             {/* Button - Resume Download */}
@@ -114,8 +127,8 @@ const Home = ({ darkMode }) => {
                 data-aos-delay="700"
               >
                 <button
-                onClick={() => window.open(CV, '_blank')}
-                className="w-full sm:w-auto inline-flex items-center justify-center text-white bg-linear-to-r from-orange-500 to-amber-500 border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform"
+                  onClick={() => window.open(resume, "_blank")}
+                  className="w-full sm:w-auto inline-flex items-center justify-center text-white bg-linear-to-r from-orange-500 to-amber-500 border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform"
                 >
                   <DownloadIcon className="w-4 h-4 sm:h-5 sm:w-5 mr-2" />
                   Download Resume
@@ -144,15 +157,24 @@ const Home = ({ darkMode }) => {
 
         {/* Stats */}
         <div className="w-full px-4 pb-8 mt-6 lg:mt-10">
-  <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 sm:gap-x-14">
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 sm:gap-x-14">
             {/* Experience */}
-            <div className="text-center" data-aos="zoom-in" data-aos-delay="600">
+            <div
+              className="text-center"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+            >
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400">
-                <CountUp start={0} end={experienceYears} duration={10} suffix="+" />
+                <CountUp
+                  start={0}
+                  end={experienceYears}
+                  duration={10}
+                  suffix="+"
+                />
               </div>
               <div
                 className={`text-xs sm:text-sm lg:text-base ${
-                  darkMode ? 'text-gray-300' : 'text-gray-600'
+                  darkMode ? "text-gray-300" : "text-gray-600"
                 }`}
               >
                 Years Experience
@@ -160,13 +182,17 @@ const Home = ({ darkMode }) => {
             </div>
 
             {/* Code commits */}
-            <div className="text-center" data-aos="zoom-in" data-aos-delay="650">
+            <div
+              className="text-center"
+              data-aos="zoom-in"
+              data-aos-delay="650"
+            >
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400">
                 <CountUp start={0} end={10000} duration={10} suffix="+" />
               </div>
               <div
                 className={`text-xs sm:text-sm lg:text-base ${
-                  darkMode ? 'text-gray-300' : 'text-gray-600'
+                  darkMode ? "text-gray-300" : "text-gray-600"
                 }`}
               >
                 Code Commits
@@ -174,13 +200,17 @@ const Home = ({ darkMode }) => {
             </div>
 
             {/* Cup of coffee */}
-            <div className="text-center" data-aos="zoom-in" data-aos-delay="700">
+            <div
+              className="text-center"
+              data-aos="zoom-in"
+              data-aos-delay="700"
+            >
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-400">
                 <CountUp start={0} end={500} duration={8} suffix="+" />
               </div>
               <div
                 className={`text-xs sm:text-sm lg:text-base ${
-                  darkMode ? 'text-gray-300' : 'text-gray-600'
+                  darkMode ? "text-gray-300" : "text-gray-600"
                 }`}
               >
                 Cups of Coffee
@@ -190,7 +220,7 @@ const Home = ({ darkMode }) => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
